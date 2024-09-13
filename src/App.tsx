@@ -63,6 +63,7 @@ export function App() {
 
       <div>
         <button onClick={() => handleResult(inputValue1, inputValue2)} >=</button>
+        {/* {isGameFinished ? <button>restart</button> : <></>} */}
       </div>
     </div>
   );
