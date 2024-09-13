@@ -1,5 +1,7 @@
 interface Props {
     value: number;
+    prefix: string;
+    suffix: string;
     onChange: (value: number) => void;
     onClear: () => void;
 }
@@ -7,7 +9,7 @@ interface Props {
 export function Keyboard(props: Props) {
     return (
         <div>
-            <input type="text" value={props.value} readOnly />
+            <input type="text" value={props.prefix + props.value + props.suffix} readOnly />
             <p />
             <div>
                 <button onClick={() => props.onChange(1)}>1</button>
